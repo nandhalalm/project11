@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome! {{ user.username }}</h1>
+    <p>Your dashboard</p>
+
+    <h2>User Information</h2>
+    <p>Name: {{ details.name }} </p>
+    <p>Age: {{ details.age }}</p>
+    <p>Phone: {{ details.phone }}</p>
+    <p>Address: {{ details.address }}</p>
+
+    <a href="{% url 'profile' %}"><button>Profile</button></a>
+    <a href="{% url 'logout' %}"><button>Logout</button></a>
+    <a href="{% url 'addmarks' %}"><button>addmark</button></a>
+    <a href="{% url 'viewmarks' %}"><button>viewmark</button></a>
+    <a href="{% url 'viewedit' %}"><button>edit</button></a>
+    </div>
+    
+</body>
+</html>
+

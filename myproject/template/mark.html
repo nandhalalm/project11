@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <title>Marks</title>
+</head>
+<body>
+   <h1>Marks for {{ user.username }}</h1>
+        <ul>
+                {% for mark in data %}
+                    <li>
+                        Science: {{ mark.science }}, 
+                        Maths: {{ mark.maths }}, 
+                        English: {{ mark.english }}
+                   </li>
+                   <a href="{% url 'viewedit' %}"><button> want to edit</button></a>
+                   <a href="{% url 'viewdelete' %}"><button> DELETE</button></a>
+                {% endfor %}
+       </ul>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Add Marks for {{ user.username }}</h1>
+    <form action="{% url 'addmarks' %}" method="POST">
+        {% csrf_token %}
+        
+        <label for="science">Science:</label>
+        <input type="number" name="science" required><br>
+
+        <label for="maths">Maths:</label>
+        <input type="number" name="maths" required><br>
+
+        <label for="english">English:</label>
+        <input type="number" name="english" required><br>
+        
+        <button type="submit">Save</button>
+    </form>
+    
+    <a href="{% url 'viewmarks' %}"><button> View Marks</button></a>
+    <a href="{% url 'viewedit' %}"><button>Edit</button></a>
+    
+</body>
+</html>

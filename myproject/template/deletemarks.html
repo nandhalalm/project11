@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <form method="POST">
+         {% csrf_token %}
+
+        <h2>Are you sure you want to delete your marks?</h2>
+
+        <p>Marks for Science: {{mark.science}}</p>
+        <p>Marks for Maths: {{mark.maths}}</p>
+        <p>Marks for English: {{mark.english}}</p>
+    
+            <button type="submit">Yes, Delete</button>
+            <a href="{% url 'home' %}">Cancel</a>
+        </form>
+    </body>
+</html>
+    
